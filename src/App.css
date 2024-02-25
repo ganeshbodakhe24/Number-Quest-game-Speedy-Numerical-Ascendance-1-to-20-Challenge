@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  background-color: black;
+  background: radial-gradient(circle at 10% 20%, rgb(69, 86, 102) 0%, rgb(34, 34, 34) 90%);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header {
+  text-align: center;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.header h {
+  letter-spacing: 0.3rem;
+  word-spacing: 1rem;
+}
+
+.header p {
+  letter-spacing: 0.2rem;
+  word-spacing: 0.3rem;
+  line-height: 2rem;
+}
+
+.body_outer_div {
+  margin: auto;
+  margin-top: 3rem;
+  width: 90%;
+  max-width: 800px;
+  /* border: 1px solid white; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.number_box button {
+  background-color: rgb(235, 239, 0);
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  margin: 1rem;
+  border: 1px solid rgb(52, 52, 52);
+  border-radius: 0.51rem;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.wrongClick button {
+  background-color: #ff0404;
+  animation: blink 0.3s infinite;
+}
+
+@keyframes blink {
+  0% {
+    background-color: red;
+    color: #ffffff;
   }
-  to {
-    transform: rotate(360deg);
+
+  100% {
+    background-color: rgb(235, 239, 0);
+    color: rgb(0, 0, 0);
   }
+
+}
+
+.number_box button:active {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: 2px solid white;
+}
+
+.reset_btn {
+  text-align: center;
+  margin: 2rem;
+}
+
+.reset_btn button {
+  background-color: #ffff00;
+  width: 13rem;
+  height: 2.8rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.612);
+  border-radius: 1rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+}
+
+.reset_btn button:active {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: 0.1rem solid rgba(255, 255, 255, 0.612);
+
+}
+
+@media screen and (max-width:800px) {
+  .number_box button {
+    height: 3.3rem;
+    width: 3.3rem;
+    margin: 0.7rem;
+    font-size: 2rem;
+  }
+}
+
+.footer {
+  text-align: center;
+  margin-top: 2rem;
+  letter-spacing: 1rem;
+  color: rgb(0, 255, 225);
+  line-height: 2rem;
+}
+
+.timer {
+  text-align: center;
+  font-size: 1.4rem;
+  letter-spacing: 0.3rem;
+  width: 100%;
+}
+
+.timer_span{
+  /* background-color: black; */
+  display: inline-block;
+  /* margin-left: 2rem; */
+  width:5rem;
+  font-size:2rem;
+}
+
+.timeup {
+  animation: timeup 0.4s infinite;
+}
+
+@keyframes timeup {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+
 }
